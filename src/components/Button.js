@@ -6,7 +6,7 @@ class Button extends Component {
 
         return (
             <button 
-                type="button" 
+                type='button' 
                 className={`${isSelected ? 'me-3 btn btn-primary': 'me-3 btn btn-outline-primary'}`} 
                 onClick={() => handleClick(value)}
             >

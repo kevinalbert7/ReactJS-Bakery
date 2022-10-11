@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 
-
-
-
 class Add extends Component {
-
     constructor () {
         super () 
         
@@ -27,9 +23,8 @@ class Add extends Component {
     }
     
     render() {
-        const { addItem, calculatePrice } = this.props
+        const { addItem } = this.props
         const { price, name } = this.state
-        // console.log("props", this.props)
 
         return (
             <div>
@@ -38,7 +33,7 @@ class Add extends Component {
                     <label className='form-label'>Name</label>
                     <input 
                         className='form-control mb-4' 
-                        type="text" 
+                        type='text' 
                         onChange={this.handleNameChange} 
                         value={name}
                     />
@@ -47,9 +42,9 @@ class Add extends Component {
                     <br />
                     <input 
                         className='mb-4' 
-                        type="range" 
-                        min="1" 
-                        max="10"
+                        type='range' 
+                        min='1' 
+                        max='10'
                         onChange={this.handlePriceChange} 
                         value={price}
                     />
@@ -57,7 +52,10 @@ class Add extends Component {
                     <button 
                         type='button'
                         className='btn btn-outline-primary'
-                        onClick={() => {addItem(name, price), calculatePrice}}>Ajouter</button>
+                        onClick={() => {addItem(name, price)}}
+                    >
+                        Ajouter
+                    </button>
 
                 </div>
             </div>
